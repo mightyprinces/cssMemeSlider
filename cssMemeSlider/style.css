@@ -52,10 +52,11 @@ html:not(:hover) * {
 
 .description {
   font-size: 1.2rem;
-  flex-grow: 1;
-  display: none;
+  line-height: 1.2rem;
+  margin-top: -1.2rem;
+
   opacity: 0;
-  transition: opacity var(--animation-time);
+  transition: opacity 0.2s 0.2s;
 }
 
 .navigation {
@@ -95,7 +96,6 @@ input[type="radio"] {
 #slide2:checked ~ .slider__description-and-navigation .description-container .description[data-type="slide2"],
 #slide3:checked ~ .slider__description-and-navigation .description-container .description[data-type="slide3"],
 #slide4:checked ~ .slider__description-and-navigation .description-container .description[data-type="slide4"] {
-  display: flex;
   opacity: 1;
 }
 
