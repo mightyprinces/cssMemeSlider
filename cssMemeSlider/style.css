@@ -13,8 +13,8 @@ body {
   margin: 0 auto;
 }
 
-body:not(:hover) {
-  transition: none;
+html:not(:hover) * {
+  transition: none !important;
 }
 
 .slider {
