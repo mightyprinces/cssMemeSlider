@@ -1,6 +1,7 @@
 :root {
   --accent-color: #76aaf2;
-  --accent-color-alt: #95c7fc;
+  --accent-color-alt: white;
+  --color-active: #ffffff90;
   --animation-time: 0.3s;
 }
 
@@ -88,12 +89,29 @@ input[type="radio"] {
   box-shadow: 0 0 0 1rem var(--accent-color-alt) inset;
 }
 
+.navigation__button:active {
+  box-shadow: 0 0 0 1rem var(--color-active) inset;
+}
+
 #slide1:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide1"],
 #slide2:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide2"],
 #slide3:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide3"],
 #slide4:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide4"] {
+  box-shadow: 0 0 0 0.2rem var(--accent-color) inset;
+}
+
+#slide1:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide1"]:hover,
+#slide2:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide2"]:hover,
+#slide3:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide3"]:hover,
+#slide4:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide4"]:hover {
   box-shadow: 0 0 0 0.2rem var(--accent-color-alt) inset;
-  cursor: auto;
+}
+
+#slide1:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide1"]:active,
+#slide2:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide2"]:active,
+#slide3:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide3"]:active,
+#slide4:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide4"]:active {
+  box-shadow: 0 0 0 0.2rem var(--color-active) inset;
 }
 
 #slide1:checked ~ .slider__description-and-navigation .description-container .description[data-type="slide1"],
