@@ -1,0 +1,147 @@
+:root {
+  --accent-color: #76aaf2;
+  --accent-color-alt: white;
+  --color-active: #ffffff90;
+  --animation-time: 0.3s;
+}
+
+body {
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+html:not(:hover) * {
+  transition: none !important;
+}
+
+.slider {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #25282a;
+  width: 50rem;
+  padding: 3rem;
+}
+
+.slider__images {
+  width: 100%;
+  display: flex;
+  margin-bottom: 1.2rem;
+  overflow: hidden;
+}
+
+.slider__image {
+  width: 100%;
+  margin-left: -100%;
+  transform: translateX(100%);
+  transition: transform var(--animation-time);
+}
+.slider__image:first-child {
+  margin-left: 0;
+} 
+
+.slider__description-and-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.description-container {
+  margin-top: 1.2rem;
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  margin-top: -1.2rem;
+
+  opacity: 0;
+  transition: opacity 0.2s 0.2s;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.navigation__button {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: flex;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 0.5rem solid transparent;
+  box-shadow: 0 0 0 1rem var(--accent-color) inset;
+  transition: all var(--animation-time);
+}
+
+.navigation__button:hover {
+  box-shadow: 0 0 0 1rem var(--accent-color-alt) inset;
+}
+
+.navigation__button:active {
+  box-shadow: 0 0 0 1rem var(--color-active) inset;
+}
+
+#slide1:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide1"],
+#slide2:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide2"],
+#slide3:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide3"],
+#slide4:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide4"] {
+  box-shadow: 0 0 0 0.2rem var(--accent-color) inset;
+}
+
+#slide1:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide1"]:hover,
+#slide2:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide2"]:hover,
+#slide3:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide3"]:hover,
+#slide4:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide4"]:hover {
+  box-shadow: 0 0 0 0.2rem var(--accent-color-alt) inset;
+}
+
+#slide1:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide1"]:active,
+#slide2:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide2"]:active,
+#slide3:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide3"]:active,
+#slide4:checked ~ .slider__description-and-navigation .navigation .navigation__button[for="slide4"]:active {
+  box-shadow: 0 0 0 0.2rem var(--color-active) inset;
+}
+
+#slide1:checked ~ .slider__description-and-navigation .description-container .description[data-type="slide1"],
+#slide2:checked ~ .slider__description-and-navigation .description-container .description[data-type="slide2"],
+#slide3:checked ~ .slider__description-and-navigation .description-container .description[data-type="slide3"],
+#slide4:checked ~ .slider__description-and-navigation .description-container .description[data-type="slide4"] {
+  opacity: 1;
+}
+
+#slide1:checked ~ .slider__images .slider__image[data-type="slide1"],
+#slide2:checked ~ .slider__images .slider__image[data-type="slide2"],
+#slide3:checked ~ .slider__images .slider__image[data-type="slide3"],
+#slide4:checked ~ .slider__images .slider__image[data-type="slide4"] {
+  transform: translateX(0);
+}
+
+
+/* --- Media Queries --- */
+
+@media screen and (max-width: 768px) {
+  .slider__description-and-navigation {
+    flex-direction: column-reverse;
+  }
+
+  .description-container {
+    align-self: flex-start;
+    margin-top: 2rem;
+  }
+
+  .slider {
+    padding: 2rem;
+}
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Meme Slider</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+<body>
+  <div class="slider">
+
+      <input type="radio" name="meme-slides" id="slide1" checked>
+      <input type="radio" name="meme-slides" id="slide2">
+      <input type="radio" name="meme-slides" id="slide3">
+      <input type="radio" name="meme-slides" id="slide4">
+
+      <div class="slider__images">
+        <img src="./src/01.jpg" alt="slide1" class="slider__image" data-type="slide1">
+        <img src="./src/02.jpg" alt="slide2" class="slider__image" data-type="slide2">
+        <img src="./src/03.jpg" alt="slide3" class="slider__image" data-type="slide3">
+        <img src="./src/04.jpg" alt="slide4" class="slider__image" data-type="slide4">
+      </div>
+
+      <div class="slider__description-and-navigation">
+        <div class="description-container">
+          <div class="description" data-type="slide1">Meme Slide Description</div>
+          <div class="description" data-type="slide2">Bip Boop Boop</div>
+          <div class="description" data-type="slide3">Another One Description</div>
+          <div class="description" data-type="slide4">Hey you!</div>
+        </div>
+        
+        <div class="navigation">
+          <label for="slide1" class="navigation__button"></label>
+          <label for="slide2" class="navigation__button"></label>
+          <label for="slide3" class="navigation__button"></label>
+          <label for="slide4" class="navigation__button"></label>
+        </div>
+      </div>
+      
+
+  </div>
+</body>
+</html>
