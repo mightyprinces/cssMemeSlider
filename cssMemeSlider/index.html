@@ -12,35 +12,37 @@
 </head>
 <body>
   <div class="slider">
-    <div class="slider__images">
-      <img src="./src/01.jpg" alt="" class="slider__image slider__image--active">
-      <img src="./src/02.jpg" alt="" class="slider__image">
-      <img src="./src/03.jpg" alt="" class="slider__image">
-      <img src="./src/04.jpg" alt="" class="slider__image">
-    </div>
-    <div class="slider__description-and-navigation">
+
       <input type="radio" name="meme-slides" id="slide1" checked>
       <input type="radio" name="meme-slides" id="slide2">
       <input type="radio" name="meme-slides" id="slide3">
       <input type="radio" name="meme-slides" id="slide4">
 
-      <div class="description-container">
-        <div class="description" data-type="slide1">Meme Slide Description - 1</div>
-        <div class="description" data-type="slide2">Meme Slide Description - 2</div>
-        <div class="description" data-type="slide3">Meme Slide Description - 3</div>
-        <div class="description" data-type="slide4">Meme Slide Description - 4</div>
-        <div class="description" data-type="slide5">Meme Slide Description - 5</div>
+      <div class="slider__images">
+        <img src="./src/01.jpg" alt="slide1" class="slider__image" data-type="slide1">
+        <img src="./src/02.jpg" alt="slide2" class="slider__image" data-type="slide2">
+        <img src="./src/03.jpg" alt="slide3" class="slider__image" data-type="slide3">
+        <img src="./src/04.jpg" alt="slide4" class="slider__image" data-type="slide4">
       </div>
 
-      
-      
-      <div class="navigation">
-        <label for="slide1" class="navigation__button"></label>
-        <label for="slide2" class="navigation__button"></label>
-        <label for="slide3" class="navigation__button"></label>
-        <label for="slide4" class="navigation__button"></label>
+      <div class="slider__description-and-navigation">
+        <div class="description-container">
+          <div class="description" data-type="slide1">Meme Slide Description - 1</div>
+          <div class="description" data-type="slide2">Meme Slide Description - 2</div>
+          <div class="description" data-type="slide3">Meme Slide Description - 3</div>
+          <div class="description" data-type="slide4">Meme Slide Description - 4</div>
+          <div class="description" data-type="slide5">Meme Slide Description - 5</div>
+        </div>
+        
+        <div class="navigation">
+          <label for="slide1" class="navigation__button"></label>
+          <label for="slide2" class="navigation__button"></label>
+          <label for="slide3" class="navigation__button"></label>
+          <label for="slide4" class="navigation__button"></label>
+        </div>
       </div>
-    </div>
+      
+
   </div>
 </body>
 </html>
