@@ -50,6 +50,10 @@ html:not(:hover) * {
   align-items: center;
 }
 
+.description-container {
+  margin-top: 1.2rem;
+}
+
 .description {
   font-size: 1.2rem;
   line-height: 1.2rem;
@@ -104,4 +108,22 @@ input[type="radio"] {
 #slide3:checked ~ .slider__images .slider__image[data-type="slide3"],
 #slide4:checked ~ .slider__images .slider__image[data-type="slide4"] {
   transform: translateX(0);
+}
+
+
+/* --- Media Queries --- */
+
+@media screen and (max-width: 768px) {
+  .slider__description-and-navigation {
+    flex-direction: column-reverse;
+  }
+
+  .description-container {
+    align-self: flex-start;
+    margin-top: 2rem;
+  }
+
+  .slider {
+    padding: 2rem;
+}
 }
